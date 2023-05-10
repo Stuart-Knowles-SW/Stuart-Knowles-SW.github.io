@@ -1,10 +1,5 @@
 body {
-    background-image: url("./super-important-background.png");
-    background-repeat: no-repeat;
-}
-
-body * {
-    background-color: rgba(0.1, 0.1, 0.1, 50%);
+    background: #EEEEFF;
 }
 
 h1 {
@@ -20,17 +15,22 @@ h1 + p {
 }
 
 h2 {
+    display: flex;
     color: aquamarine;
     font-family: Bahnschrift, serif;
     font-stretch: extra-expanded;
 }
 
-h2::after {
+h2::after, h2::before {
     content: "A circle!?";
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
     background-color: chartreuse;
+    color: black;
+    text-align: center;
+    line-height: 160px;
 }
 
 p {
