@@ -1,6 +1,10 @@
 body {
     background-image: url("./super-important-background.png");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+}
+
+body * {
+    background-color: rgba(0.1, 0.1, 0.1, 50%);
 }
 
 h1 {
