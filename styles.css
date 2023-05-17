@@ -1,0 +1,52 @@
+body {
+  background: #002;
+  color: lightcyan;
+  font-family: "Comic Sans MS", sans-serif;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 32px;
+}
+header h1 {
+  text-align: center;
+  font-size: 72px;
+  font-weight: lighter;
+  margin: 0 0 18px;
+  text-shadow: 0 0 20px lightcyan;
+}
+header p {
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+.main-content .text {
+  flex: 50%;
+  display: flex;
+}
+.main-content .image {
+  flex: 50%;
+  margin-left: auto;
+  box-sizing: border-box;
+  border: 5px goldenrod solid;
+  border-radius: 5px;
+  background-color: goldenrod;
+  max-width: 300px;
+  box-shadow: 10px 10px 20px 5px #336;
+}
+.main-content .image img {
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */
