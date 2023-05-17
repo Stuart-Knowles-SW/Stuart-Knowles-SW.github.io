@@ -31,6 +31,8 @@ header p {
 .main-content .text {
   flex: 50%;
   display: flex;
+  max-width: 50%;
+  margin-right: 10px;
 }
 .main-content .image {
   flex: 50%;
@@ -61,6 +63,7 @@ header p {
   border: 1px solid cadetblue;
   flex: 1;
   line-height: 32px;
+  color: goldenrod;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */

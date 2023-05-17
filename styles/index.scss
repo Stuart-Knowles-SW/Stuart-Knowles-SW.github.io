@@ -33,6 +33,8 @@ header {
     .text {
         flex: 50%;
         display: flex;
+        max-width: 50%;
+        margin-right: 10px;
     }
 
     .image {
@@ -43,7 +45,6 @@ header {
         border-radius: 5px;
         background-color: goldenrod;
         max-width: 300px;
-        //box-shadow: 1px 1px 10px 5px goldenrod;
         box-shadow: 10px 10px 20px 5px #336;
 
         img {
@@ -69,5 +70,6 @@ header {
         border: 1px solid cadetblue;
         flex: 1;
         line-height: 32px;
+        color: goldenrod;
     }
 }
