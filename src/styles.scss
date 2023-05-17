@@ -1,0 +1,36 @@
+body {
+    background: #002;
+    color: lightcyan;
+    font-family: "Comic Sans MS", sans-serif;
+    width: 100%;
+}
+
+.dump {
+    url("assets/joeyGold.png") 67.5% 50% no-repeat fixed;
+    background-size: 25% auto;
+}
+
+.background-img {
+    position: fixed;
+    right: 10%;
+    align-self: center;
+    width: 30%;
+    height: auto;
+    border: 5px goldenrod solid;
+    border-radius: 5px;
+}
+
+h1 + p {
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+h2 {
+    display: flex;
+    font-stretch: extra-expanded;
+}
+
+p {
+    font-style: oblique;
+}
