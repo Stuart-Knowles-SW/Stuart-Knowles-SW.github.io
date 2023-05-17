@@ -30,7 +30,7 @@ header p {
 }
 .main-content .text {
   flex: 50%;
-  display: flex;
+  display: block;
   max-width: 50%;
   margin-right: 10px;
 }
