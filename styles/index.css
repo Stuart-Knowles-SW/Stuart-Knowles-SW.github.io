@@ -28,6 +28,9 @@ header p {
   display: flex;
   flex-direction: row;
 }
+.main-content h2 {
+  color: goldenrod;
+}
 .main-content .text {
   flex: 50%;
   display: block;

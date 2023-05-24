@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="styles/index.css">
     <link
         rel="icon"
-        href="file:///C:/Work/Training/training-website/myIcon.ico"
+        href="myIcon.ico"
         sizes="16x16 32x32 128x128 512x512"
         type="image/x-icon"
-        crossorigin=anonymous
     />
 </head>
 <body>
@@ -17,7 +16,9 @@
         <ul>
             <li> Home </li>
             <li> Bronze </li>
-            <li> Maximum </li>
+            <li>
+                <button onclick="changeContent()"> Maximum </button>
+            </li>
             <li> The Builder </li>
             <li> Hummus </li>
         </ul>
@@ -27,7 +28,8 @@
         <p> Your one stop source for all Joey related information </p>
     </header>
     <section class="main-content">
-        <div class="text">
+        <div id="mainContent" class="text">
+            <h2>Joey Gold</h2>
             <p>
                 Joey really is a wonderful guy. Although his origins are unknown, he has watched over
                 the world with a careful eye for centuries.
@@ -42,5 +44,6 @@
             <img src="images/joeyGold.png" alt="The King"/>
         </div>
     </section>
+    <script type="text/javascript" src="./scripts/changeContent.js"></script>
 </body>
 </html>
