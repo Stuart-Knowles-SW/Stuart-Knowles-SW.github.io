@@ -1,10 +1,42 @@
 body {
-    background: #002;
-    color: lightcyan;
-    font-family: "Comic Sans MS", sans-serif;
     margin: 5px 10%;
     display: flex;
     flex-direction: column;
+}
+
+.default {
+    background: #002;
+    color: lightcyan;
+    font-family: "Comic Sans MS", sans-serif;
+
+    h2 {
+        color: goldenrod;
+    }
+
+    button {
+        border-color: goldenrod;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #348;
+        }
+    }
+}
+
+.maximum {
+    background: #E90;
+    color: black;
+    font-family: "Arial Black", serif;
+    font-weight: bolder;
+    cursor: url("images/lightning-cursor.png"), auto;
+
+    button {
+        border-color: black;
+
+        &:hover {
+            background-color: red;
+        }
+    }
 }
 
 header {
@@ -29,10 +61,7 @@ header {
 .main-content {
     display: flex;
     flex-direction: row;
-
-    h2 {
-        color: goldenrod;
-    }
+    height: 400px;
 
     .text {
         flex: 50%;
@@ -49,6 +78,7 @@ header {
         border-radius: 5px;
         background-color: goldenrod;
         max-width: 300px;
+        max-height: 400px;
         box-shadow: 10px 10px 20px 5px #336;
 
         img {
@@ -61,19 +91,21 @@ header {
 }
 
 .top-nav {
-    ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0;
-        list-style-type: none;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 0 10px;
 
-    li {
+    button {
         text-align: center;
-        border: 1px solid cadetblue;
-        flex: 1;
         line-height: 32px;
-        color: goldenrod;
+        font: inherit;
+        background: unset;
+        color: inherit;
+        max-width: 120px;
+        border-width: 3px;
+        padding: 4px 9px;
+        cursor: pointer;
     }
 }

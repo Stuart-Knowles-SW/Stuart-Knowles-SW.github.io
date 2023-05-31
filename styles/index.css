@@ -1,10 +1,37 @@
 body {
-  background: #002;
-  color: lightcyan;
-  font-family: "Comic Sans MS", sans-serif;
   margin: 5px 10%;
   display: flex;
   flex-direction: column;
+}
+
+.default {
+  background: #002;
+  color: lightcyan;
+  font-family: "Comic Sans MS", sans-serif;
+}
+.default h2 {
+  color: goldenrod;
+}
+.default button {
+  border-color: goldenrod;
+  border-radius: 5px;
+}
+.default button:hover {
+  background-color: #348;
+}
+
+.maximum {
+  background: #E90;
+  color: black;
+  font-family: "Arial Black", serif;
+  font-weight: bolder;
+  cursor: url("images/lightning-cursor.png"), auto;
+}
+.maximum button {
+  border-color: black;
+}
+.maximum button:hover {
+  background-color: red;
 }
 
 header {
@@ -27,9 +54,7 @@ header p {
 .main-content {
   display: flex;
   flex-direction: row;
-}
-.main-content h2 {
-  color: goldenrod;
+  height: 400px;
 }
 .main-content .text {
   flex: 50%;
@@ -45,6 +70,7 @@ header p {
   border-radius: 5px;
   background-color: goldenrod;
   max-width: 300px;
+  max-height: 400px;
   box-shadow: 10px 10px 20px 5px #336;
 }
 .main-content .image img {
@@ -54,19 +80,23 @@ header p {
   object-fit: cover;
 }
 
-.top-nav ul {
+.top-nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0;
-  list-style-type: none;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px 0 10px;
 }
-.top-nav li {
+.top-nav button {
   text-align: center;
-  border: 1px solid cadetblue;
-  flex: 1;
   line-height: 32px;
-  color: goldenrod;
+  font: inherit;
+  background: unset;
+  color: inherit;
+  max-width: 120px;
+  border-width: 3px;
+  padding: 4px 9px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

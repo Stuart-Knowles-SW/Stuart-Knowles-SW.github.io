@@ -1,6 +1,8 @@
-async function changeContent() {
+async function contentManager(contentId) {
+    document.body.classList.remove(...document.body.classList)
+    document.body.classList.add(contentId)
     const contentDiv = document.getElementById("mainContent")
-    const newContentJson = await import("../content/maximum.mjs").then(module => module.default)
+    const newContentJson = await import(`../content/${contentId}.mjs`).then(module => module.default)
     const newHeader = document.createElement("h2")
     newHeader.appendChild(document.createTextNode(newContentJson.header))
     const newContent = []
@@ -16,3 +18,5 @@ async function changeContent() {
     }
     contentDiv.append(newHeader, ...newContent)
 }
+
+contentManager("default")

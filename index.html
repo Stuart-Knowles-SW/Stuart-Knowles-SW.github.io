@@ -6,22 +6,18 @@
     <link rel="stylesheet" href="styles/index.css">
     <link
         rel="icon"
-        href="myIcon.ico"
+        href="images/myIcon.ico"
         sizes="16x16 32x32 128x128 512x512"
         type="image/x-icon"
     />
 </head>
 <body>
     <nav class="top-nav">
-        <ul>
-            <li> Home </li>
-            <li> Bronze </li>
-            <li>
-                <button onclick="changeContent()"> Maximum </button>
-            </li>
-            <li> The Builder </li>
-            <li> Hummus </li>
-        </ul>
+        <button type=button onclick="contentManager('default')"> Home </button>
+<!--        <button> Bronze </button>-->
+        <button type=button onclick="contentManager('maximum')"> Maximum </button>
+<!--        <button> The Builder </button>-->
+<!--        <button> Hummus </button>-->
     </nav>
     <header>
         <h1> JoeyRef </h1>
@@ -29,21 +25,11 @@
     </header>
     <section class="main-content">
         <div id="mainContent" class="text">
-            <h2>Joey Gold</h2>
-            <p>
-                Joey really is a wonderful guy. Although his origins are unknown, he has watched over
-                the world with a careful eye for centuries.
-            </p>
-            <p>
-                When he is not acting as eternal guardian of the human race, Joey enjoys table football
-                and playing in brass bands. He has also been known to enjoy hummus on occasion, though
-                it has unpredictable effects on his superhuman physiology.
-            </p>
+            <script type="text/javascript" src="scripts/contentManager.js"></script>
         </div>
         <div class="image">
             <img src="images/joeyGold.png" alt="The King"/>
         </div>
     </section>
-    <script type="text/javascript" src="./scripts/changeContent.js"></script>
 </body>
 </html>
