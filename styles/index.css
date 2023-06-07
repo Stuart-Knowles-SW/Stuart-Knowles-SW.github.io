@@ -1,7 +1,16 @@
+html {
+  margin: 0;
+  height: 100%;
+}
+
 body {
   margin: 5px 10%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+}
+body button {
+  cursor: pointer;
 }
 
 .default {
@@ -25,10 +34,10 @@ body {
   color: black;
   font-family: "Arial Black", serif;
   font-weight: bolder;
-  cursor: url("../images/lightning-cursor.png"), auto;
 }
 .maximum button {
   border-color: black;
+  cursor: url("../images/lightning-cursor2.png") 10 10, auto;
 }
 .maximum button:hover {
   background-color: red;
@@ -63,6 +72,7 @@ header p {
   margin-right: 10px;
 }
 .main-content .image {
+  position: relative;
   flex: 50%;
   margin-left: auto;
   box-sizing: border-box;
@@ -73,7 +83,7 @@ header p {
   max-height: 400px;
   box-shadow: 10px 10px 20px 5px #336;
 }
-.main-content .image img {
+.main-content .image .portrait {
   border-radius: 5px;
   height: 100%;
   width: 100%;
@@ -96,7 +106,13 @@ header p {
   max-width: 120px;
   border-width: 3px;
   padding: 4px 9px;
-  cursor: pointer;
+}
+
+.deal-with-it {
+  width: 0;
+  position: absolute;
+  left: 20.5%;
+  top: 28.5%;
 }
 
 /*# sourceMappingURL=index.css.map */

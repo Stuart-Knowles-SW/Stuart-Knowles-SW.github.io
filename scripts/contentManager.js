@@ -1,4 +1,4 @@
-async function contentManager(contentId) {
+async function changeStyle(contentId) {
     document.body.classList.remove(...document.body.classList)
     document.body.classList.add(contentId)
     const contentDiv = document.getElementById("mainContent")
@@ -12,11 +12,36 @@ async function contentManager(contentId) {
             newPara.appendChild(document.createTextNode(str))
             newContent.push(newPara)
         }
-        )
+    )
     while(contentDiv.childNodes.length >= 1) {
         contentDiv.removeChild(contentDiv.firstChild);
     }
     contentDiv.append(newHeader, ...newContent)
+}
+
+async function minmax(contentId) {
+    const sunglasses = document.getElementById("sunglasses")
+    if (contentId === "maximum") {
+        const angle = Math.random() * 2 * Math.PI
+        const radius = 400;
+        const deltaX = `${radius * Math.cos(angle)}px`
+        const deltaY = `${radius * Math.sin(angle)}px`
+        document.documentElement.style.cursor = "url(\"../images/lightning-cursor2.png\") 10 10, auto"
+        sunglasses.style.width = "130px"
+        sunglasses.animate([
+            {transform: `translateX(${deltaX}) translateY(${deltaY})`},
+            {transform: "translateX(0) translateY(0)"}
+        ],
+            {duration: 1500, easing: "linear"})
+    } else {
+        document.documentElement.style.cursor = ""
+        sunglasses.style.width = "0"
+    }
+}
+
+async function contentManager(contentId) {
+    await changeStyle(contentId)
+    await minmax(contentId)
 }
 
 contentManager("default")
