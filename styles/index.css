@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  margin: 0.5rem 7.5%;
+  margin: 0.5rem 7.5vw;
   display: flex;
   flex-direction: column;
 }
@@ -21,11 +21,16 @@ body button {
   color: goldenrod;
 }
 .default button {
-  border-color: goldenrod;
-  border-radius: 0.5em;
+  border-color: yellow;
+  background-color: orange;
+  color: red;
+  font-family: "Arial Black", serif;
 }
-.default button:hover {
-  background-color: #348;
+@media (hover: hover) {
+  .default button:hover {
+    background-color: red;
+    color: black;
+  }
 }
 
 .maximum {
@@ -35,11 +40,17 @@ body button {
   font-weight: bolder;
 }
 .maximum button {
-  border-color: black;
+  box-sizing: border-box;
+  border-color: cornflowerblue;
+  background-color: darkviolet;
+  border-radius: 0.5em;
   cursor: url("../images/lightning-cursor2.png") 10 10, auto;
+  font-family: "Comic Sans MS", sans-serif;
 }
-.maximum button:hover {
-  background-color: red;
+@media (hover: hover) {
+  .maximum button:hover {
+    background-color: #348;
+  }
 }
 
 header {
@@ -102,24 +113,6 @@ header p {
   object-fit: cover;
 }
 
-.top-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem 0 0.75rem;
-}
-.top-nav button {
-  text-align: center;
-  line-height: 2rem;
-  font: inherit;
-  background: unset;
-  color: inherit;
-  max-width: 120px;
-  border-width: 3px;
-  padding: 0.25rem 0.5rem;
-}
-
 .deal-with-it {
   width: 0;
   position: absolute;
@@ -136,7 +129,6 @@ header p {
   font: inherit;
   background-color: inherit;
   color: inherit;
-  max-width: 120px;
   border-width: 3px;
   padding: 0.5rem 1rem;
 }
@@ -144,9 +136,19 @@ header p {
   .maximise {
     right: unset;
     bottom: unset;
-    left: 4rem;
+    left: 7.5vw;
     top: 2rem;
   }
+}
+
+.flames {
+  background-image: url("images/flames.png");
+  background-repeat: repeat-x;
+  height: 100px;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 /*# sourceMappingURL=index.css.map */

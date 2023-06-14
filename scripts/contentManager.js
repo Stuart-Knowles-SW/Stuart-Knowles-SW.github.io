@@ -17,6 +17,9 @@ async function changeContent(contentId) {
         contentDiv.removeChild(contentDiv.firstChild);
     }
     contentDiv.append(newHeader, ...newContent)
+    const theOnlyButton = document.getElementById("hold-onto-your-butts")
+    theOnlyButton.innerHTML = contentId === "maximum" ? "de-maximise" : "MAXIMISE"
+    document.getElementById("flames").height = contentId === "maximum" ? "100px" : 0
 }
 
 async function minmax(contentId) {
