@@ -1,4 +1,4 @@
-async function changeStyle(contentId) {
+async function changeContent(contentId) {
     document.body.classList.remove(...document.body.classList)
     document.body.classList.add(contentId)
     const contentDiv = document.getElementById("mainContent")
@@ -22,12 +22,13 @@ async function changeStyle(contentId) {
 async function minmax(contentId) {
     const sunglasses = document.getElementById("sunglasses")
     if (contentId === "maximum") {
+        sunglasses.style.width = "130px"
+        const rect = sunglasses.getBoundingClientRect()
         const angle = Math.random() * 2 * Math.PI
-        const radius = 400;
+        const radius = Math.cos(angle) >= 0 ? window.innerWidth-rect.right : rect.left;
         const deltaX = `${radius * Math.cos(angle)}px`
         const deltaY = `${radius * Math.sin(angle)}px`
         document.documentElement.style.cursor = "url(\"../images/lightning-cursor2.png\") 10 10, auto"
-        sunglasses.style.width = "130px"
         sunglasses.animate([
             {transform: `translateX(${deltaX}) translateY(${deltaY})`},
             {transform: "translateX(0) translateY(0)"}
@@ -39,9 +40,19 @@ async function minmax(contentId) {
     }
 }
 
-async function contentManager(contentId) {
-    await changeStyle(contentId)
-    await minmax(contentId)
+let state = undefined
+
+async function contentManager() {
+    if (state === "default") {
+        await changeContent("maximum")
+        await minmax("maximum")
+        state = "maximum";
+    }
+    else {
+        await changeContent("default")
+        await minmax("default")
+        state = "default";
+    }
 }
 
-contentManager("default")
+contentManager()
