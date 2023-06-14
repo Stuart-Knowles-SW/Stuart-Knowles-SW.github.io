@@ -32,7 +32,7 @@ async function minmax(contentId) {
             {transform: `translateX(${deltaX}) translateY(${deltaY})`},
             {transform: "translateX(0) translateY(0)"}
         ],
-            {duration: 1500, easing: "linear"})
+            {duration: 1000, easing: "linear"})
     } else {
         document.documentElement.style.cursor = ""
         sunglasses.style.width = "0"
